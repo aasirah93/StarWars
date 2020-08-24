@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import Starwars from './components/starwars'
+import axios from 'axios'
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      hello
+    <div>
+      <Starwars/>
     </div>
   );
 }
