@@ -16,6 +16,7 @@ function Starwars(){
         <div>
             <h1>Planet Name = {planet.name}</h1>
             <h1>rotation period = {planet.rotation_period}</h1>
+            <h1>orbital_period = {planet.orbital_period}</h1>
         </div>
     )
 }
