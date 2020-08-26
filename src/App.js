@@ -7,19 +7,32 @@ import './App.css';
 function App() {
   
   const [planet, setPlanet] = useState([])
-  const [currentPageUrl, setCurrentPageUrl] = usestate("https://swapi.dev/api/planets/")
-
+  const [currentPageUrl, setCurrentPageUrl] = useState("https://swapi.dev/api/planets/")
+  const [nextPageUrl, setNextPageUrl] = useState()
+  const [prevPageUrl, setPrevPageUrl] = useState()
 
   useEffect(() => {
     axios.get(currentPageUrl).then(res => {
+    setNextPageUrl(res.data.next)
+    setPrevPageUrl(res.data.previous)
     setPlanet(res.data.results.map(p => p.name))
   })
-}, [])
+}, [currentPageUrl])
+
+  function gotoNextPage() {
+    setCurrentPageUrl(nextPageUrl)
+  }
+
+  function gotoPrevPage() {
+    setCurrentPageUrl(prevPageUrl)
+  }
 
   return (
     <div>
       <Starwars planet={planet}/>
-      <Pagination/>
+      <Pagination
+      gotoNextPage={nextPageUrl ? gotoNextPage : null}
+      gotoPrevPage={prevPageUrl ? gotoPrevPage : null}/>
     </div>
   );
 }
