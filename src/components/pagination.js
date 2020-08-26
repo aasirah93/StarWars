@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Pagination() {
+function Pagination({ nextPlanet, prevPlanet }) {
     return (
         <div>
-            <button>previous</button>
-            <button>next</button>
+            <button onClick={prevPlanet}>Previous</button>
+            <button onClick={nextPlanet}>Next</button>
         </div>
     )
 }
