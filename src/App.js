@@ -7,9 +7,11 @@ import './App.css';
 function App() {
   
   const [planet, setPlanet] = useState([])
+  const [currentPageUrl, setCurrentPageUrl] = usestate("https://swapi.dev/api/planets/")
+
 
   useEffect(() => {
-    axios.get("https://swapi.dev/api/planets/").then(res => {
+    axios.get(currentPageUrl).then(res => {
     setPlanet(res.data.results.map(p => p.name))
   })
 }, [])
