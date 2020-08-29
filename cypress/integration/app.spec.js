@@ -14,8 +14,8 @@ it ('makes an API request', () => {
   });
 
 describe('Buttons', () => {
-  it ('shows the next page', () => {
-    cy.contains('Next').click()
+    it ('shows the next page', () => {
+      cy.contains('Next').click()
   });
   });
 });
