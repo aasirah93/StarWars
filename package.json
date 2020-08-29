@@ -13,7 +13,6 @@
   },
   "scripts": {
     "cypress:open": "cypress open",
-    "test:cypress": "cypress run",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -35,6 +34,7 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^5.0.0"
+    "cypress": "^5.0.0",
+    "start-server-and-test": "^1.11.3"
   }
 }
