@@ -3,7 +3,7 @@ describe('app', ()=> {
     cy.visit('/')
 });
 
-describe('Request', ()=> {
+describe('Request', () => {
 it ('makes an API request', () => {
     cy.request('https://swapi.dev/api/planets/')
       .should((response) => {
@@ -12,6 +12,11 @@ it ('makes an API request', () => {
         expect(response).to.have.property('duration')
     });
   });
-});
 
+describe('Buttons', () => {
+  it ('shows the next page', () => {
+    cy.contains('Next').click()
+  });
+  });
+});
 });
