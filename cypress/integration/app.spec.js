@@ -14,9 +14,19 @@ it ('makes an API request', () => {
   });
 
 describe('Buttons', () => {
-    it ('shows the next page', () => {
+    it ('shows the next and previous pages', () => {
       cy.contains('Next').click()
+      cy.contains('Previous').click()
   });
   });
+
+describe ('Searchbar', () => {
+  it ('contains Search Planet', () => {
+    const input = "Dagobah"
+    .type(input)
+    cy.get('.searchbar').should('have.value', input)
+});
+});
+
 });
 });
