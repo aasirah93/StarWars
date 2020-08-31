@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Starwars from './components/starwars'
 import Pagination from './components/pagination'
+import Searchbar from './components/searchbar'
 import axios from 'axios'
 import './App.css';
 
@@ -10,6 +11,7 @@ function App() {
   const [currentPageUrl, setCurrentPageUrl] = useState("https://swapi.dev/api/planets/")
   const [nextPageUrl, setNextPageUrl] = useState()
   const [prevPageUrl, setPrevPageUrl] = useState()
+
 
   useEffect(() => {
     axios.get(currentPageUrl).then(res => {
@@ -29,6 +31,7 @@ function App() {
 
   return (
     <div>
+      <Searchbar planet={planet}/> 
       <Starwars planet={planet}/>
       <Pagination
       gotoNextPage={nextPageUrl ? gotoNextPage : null}
