@@ -22,9 +22,7 @@ describe('Buttons', () => {
 
 describe ('Searchbar', () => {
   it ('contains Search Planet', () => {
-    const input = "Dagobah"
-    .type(input)
-    cy.get('.searchbar').should('have.value', input)
+    cy.get('input').type('Dagobah')
 });
 });
 
