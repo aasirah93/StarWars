@@ -14,7 +14,9 @@ function Searchbar({planet}) {
            {planet.map(p => { 
                if(filter.length !== 0){
                    if(p.startsWith(filter)){
-                    return <li>{p} </li> 
+                    return <li style={{ color: 'blue' }}>
+                        {p}
+                        </li> 
                 //    }else{
                 //        return null
                    }
