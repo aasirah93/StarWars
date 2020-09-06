@@ -5,6 +5,8 @@ import App from './app'
 
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import axios from 'axios';
+jest.mock('axios');
 
 Enzyme.configure({ adapter: new Adapter() });
 

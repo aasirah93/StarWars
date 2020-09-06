@@ -14,7 +14,7 @@ function Searchbar({planet}) {
            {planet.map(p => { 
                if(filter.length !== 0){
                    if(p.startsWith(filter)){
-                    return <h4 style={{ color: 'Aqua'}}>
+                    return <h4 style={{ color: 'Blue'}}>
                         {p}
                         </h4> 
                 //    }else{

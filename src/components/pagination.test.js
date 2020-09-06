@@ -10,11 +10,11 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Searching/>', () => {
     it('renders the Previous button', () => {
-        const wrapper = shallow(<Pagination/>)
+        const wrapper = mount(<Pagination/>)
         const prevBtn = (wrapper.find('Previous[type="button"]'))
     });
     it('renders the Next button', () => {
         const wrapper = mount(<Pagination/>)
-       const nextBtn = (wrapper. find ('Next[type="button"]'));
-});
+       const nextBtn = (wrapper.find('Next[type="button"]'))
+  });
 });
